@@ -1,16 +1,24 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  pixelDensity(1);
+  createCanvas(400, 400);
 }
 
-let n = 0;
 function draw() {
-  clear();
-  fill(n);
-  noStroke();
-  circle(width / 2, height / 2, 50);
-  n += 2.1;
-  if (n >= 255) {
-    n -= 255;
+  background(220);
+ 
+  for (let x = 0; x < width; x += 5) {
+    stroke('blue')
+    strokeWeight(2)
+    line(x, 0, x, 400);
+  }
+  for (let x = 0; x < width; x += 6) {
+    line(x, 0, x, 400);
+    stroke('red')
+    strokeWeight(3)
+  }
+  for (let y = 0; y < width; y += 10) {
+    line(0,y,400, y)
+    stroke('green')
+    strokeWeight(4)
+ 
   }
 }
